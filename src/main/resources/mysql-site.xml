@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>jdbc.driver</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <property>
+        <name>jdbc.datasource.size</name>
+        <value>5</value>
+    </property>
+    <property>
+        <name>jdbc.url</name>
+        <value>jdbc:mysql://localhost:3306/localhost_3306?characterEncoding=utf-8</value>
+    </property>
+    <property>
+        <name>jdbc.user</name>
+        <value>root</value>
+    </property>
+    <property>
+        <name>jdbc.password</name>
+        <value>123</value>
+    </property>
+
+    <!--TODO Kafka配置-->
+    <property>
+        <name>metadata.broker.list</name>
+        <value>hadoop1:9092,hadoop2:9092,hadoop3:9092</value>
+    </property>
+    <property>
+        <name>kafka.topic</name>
+        <value>event_log</value>
+    </property>
+    <property>
+        <name>auto.offset.reset</name>
+        <!--largest/smallest-->
+        <value>largest</value>
+    </property>
+    <property>
+        <name>group.id</name>
+        <value>w17055</value>
+    </property>
+    <!--TODO mysql  spark-streaming-->
+    <property>
+        <name>streaming.checkpoint.path</name>
+        <value>/checkpoint/w1705/</value>
+    </property>
+
+    <property>
+        <name>batch.interval</name>
+        <value>5</value>
+    </property>
+</configuration>
